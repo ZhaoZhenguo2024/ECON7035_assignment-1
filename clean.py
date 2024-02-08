@@ -18,3 +18,6 @@ dataframe3 = dataframe3[~dataframe3['job'].str.contains('insurance|Insurance')]
 dataframe3 = dataframe3[['id', 'name', 'address', 'phone', 'job', 'company', 'birthdate']]
 dataframe3.reset_index(drop=True, inplace=True)
 dataframe3.to_csv(output_file, index=False)
+
+output = pd.read_csv(output_file)
+print("shape of the file: ", dataframe3.shape)
